@@ -182,5 +182,42 @@ int main()
 //7. Escreva um algoritmo que recebe vários números inteiros do usuário e verifica quem é o maior número e quem é o menor. Nesse caso, a quantidade de números a serem informados é desconhecida. O seu algoritmo deve finalizar quando o usuário digitar o número zero, que não deve entrar no conjunto dos números a serem analisados.
 
 ///*
+int main() {
+    int num;
+    int maior, menor;
+    int primeiro = 1;
 
+    printf("Digite numeros inteiros (0 para encerrar): ");
+
+    do {
+        scanf("%d", &num);
+
+        if (num != 0) {
+            if (primeiro) {
+                maior = menor = num;
+                primeiro = 0;
+            } 
+            
+            else {
+                if (num > maior) {
+                    maior = num;
+                }
+                else {
+                    menor = num;
+                }
+            }
+        }
+
+    } while (num != 0);
+
+    if (primeiro) {
+        printf("Nenhum número válido foi informado.\n");
+    } 
+    else {
+        printf("Maior número: %d\n", maior);
+        printf("Menor número: %d\n", menor);
+    }
+
+    return 0;
+}
 //*/
