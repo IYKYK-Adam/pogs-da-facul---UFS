@@ -15,21 +15,6 @@ int main()
     }
     return 0;
 }
-
-int main()
-{
-    int num;
-    printf("Informe um numero: ");
-    scanf("%d", &num);
-    if(num > 0){
-        printf("Esse numero eh positivo.");
-    }
-    else{
-        printf("O numero eh nao-positivo.");
-    }
-    return 0;
- 
-}
 */
 
 // EXERCICIOS //
