@@ -212,11 +212,80 @@ int main()
 }
 */
 
-//3.
+//3.O dono de uma padaria quer saber se vai conseguir atender os pedidos do dia sem ficar sem estoque. Para cada produto, ele informa a quantidade em estoque e a quantidade pedida pelos clientes. O programa deve calcular o percentual do estoque que será consumido e classificar a situação. Escreva um programa em C com duas funções:
+    // a. calcular Percentual: recebe a quantidade em estoque e a quantidade pedida e retorna o percentual consumido como um número real.
+    // b. classificar: recebe o percentual consumido e retorna um inteiro representando a situação: 0 para estoque tranquilo (abaixo de 50%), 1 para estoque no limite (entre 50% e 99%) e 2 para estoque insuficiente (100% ou mais) 
+// Na main, repita o processo para 3 produtos, exibindo o percentual e a mensagem correspondente para cada um. Rejeite entradas onde o estoque ou o pedido seja menor ou igual a zero, pedindo novamente até que valores válidos sejam digitados.
+/*
+double calcularPercentual(double qtdEstoque, double qtdPedida)
+{
+    double percentual =(qtdPedida/qtdEstoque)*100;
+
+    return percentual;
+}
+
+int classificar(double percentual)
+{
+    if (percentual<50){
+        return 0;
+    }
+
+    else if (percentual>=50 && percentual<=99){
+        return 1;
+    }
+
+    else{
+        return 2;
+    }
+}
 
 int main()
 {
-    
-    
+    double qtdEstoque, qtdPedida;
+    double percentual;
+
+    for (int i=1; i<4;i++)
+    {   
+        printf("|PEDIDO %d| \n", i);
+        printf("Insira a quantidade em estoque: ");
+        scanf("%lf", &qtdEstoque);
+
+        printf("Insira a quantidade do pedido: ");
+        scanf("%lf", &qtdPedida);
+
+        printf("\n");
+        
+        if (qtdPedida<=0 || qtdEstoque<=0){
+            
+            printf("Algum dos valores ta igual ou menor que 0! Insira novamente... \n");
+            i--;
+            printf("\n");
+        }
+
+        else{
+            percentual = calcularPercentual(qtdEstoque, qtdPedida);
+
+            printf("|PEDIDO %d| \n", i);
+            printf("PERCENTUAL: %.1lf%% \n", percentual);
+                if(classificar(percentual)==0){
+                    printf("status: ESTOQUE TRANQUILO \n");
+                }
+
+                else if(classificar(percentual)==1){
+                    printf("status: ESTOQUE NO LIMITE \n");
+
+                }   
+
+                else{
+                    printf("status: ESTOQUE INSUFICIEMTE \n");
+                }
+            
+            printf("\n");
+        }
+
+    }
+
     return 0;
 }
+*/
+

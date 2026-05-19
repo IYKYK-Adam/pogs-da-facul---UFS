@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /*1. Implemente um algoritmo em C que recebe dois números inteiros
-informados pelo usuário e imprime a média desses números.
+informados pelo usuário e imprime a média desses números.*/
 
 int main() {
     int n1, n2;
@@ -18,7 +18,7 @@ int main() {
     printf("a media dos numeros eh: %.2f\n", media);
 
     return 0;
-}*/
+}
 
 /*2. Implemente um algoritmo em C que recebe um número inteiro
 informado pelo usuário e imprime seu quadrado.
